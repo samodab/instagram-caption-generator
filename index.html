@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Instagram Caption Generator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header>
+    <div id="alertContainer">
+    </div>
+    <div class="container">
+      <h1 class="my-5">Instagram Caption Generator</h1>
+    </div>
+    <hr>
+  </header>
+  <main>
+    <div class="container">
+        <section id="captionHeader">
+          <h2 class="my-3">Header</h2>
+          <div class="row">
+            <div class="form-group col-md-6">
+              <input type="radio" id="headerDefault" class="form-check-input position-static ml-0" name="headerSelection" value="default" checked>
+              <label for="headerDefaultText">Default</label>
+              <textarea id="headerDefaultText" class="form-control" rows="6" readonly>💎 </textarea>
+            </div>
+            <div class="form-group col-md-6">
+              <input type="radio" id="headerCustom" class="form-check-input position-static ml-0" name="headerSelection" value="custom">
+              <label for="headerCustomText">Custom</label>
+              <textarea id="headerCustomText" class="form-control" rows="6"></textarea>
+            </div>
+          </div>
+        </section>
+        <section id="captionBody">
+          <h2 class="my-3">Body</h2>
+          <div class="row">
+            <div class="form-group col-md-6">
+              <textarea id="bodyText" class="form-control" rows="7" autofocus></textarea>
+            </div>
+          </div>
+        </section>
+        <section id="captionFooter">
+          <h2 class="my-3">Footer</h2>
+          <div class="row">
+            <div class="form-group col-md-6">
+              <input type="radio" id="footerDefault" class="form-check-input position-static ml-0" name="footerSelection" value="default" checked>
+              <label for="footerDefaultText">Default</label>
+              <textarea id="footerDefaultText" class="form-control" rows="6" readonly>Please follow me if you like my work.
+Thank you!
+DM or 📬 Email me if you need a #logo or #brandidentity.
+
+WARNING ☢️ A BUNCH OF HASHTAGS BELOW! ⬇️</textarea>
+            </div>
+            <div class="form-group col-md-6">
+              <input type="radio" id="footerCustom" class="form-check-input position-static ml-0" name="footerSelection" value="custom">
+              <label for="footerCustomText">Custom</label>
+              <textarea id="footerCustomText" class="form-control" rows="6"></textarea>
+            </div>
+          </div>
+        </section>
+        <section id="hashtags">
+          <h2 class="my-3">Hashtags</h2>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 my-3">
+              <h3>Essential <span id="essentialCount" class="badge badge-primary badge-pill"></span></h3>
+              <div id="essentialHashtags">
+
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 my-3">
+              <h3>New <span id="newCount" class="badge badge-primary badge-pill"></span></h3>
+              <div id="newHashtags">
+
+              </div>
+              <div class="input-group my-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">#</span>
+                </div>
+                <input type="text" id="newHashtag" class="form-control" placeholder="Add new hashtag" autocomplete="off">
+                <button type="button" class="btn btn-primary ml-3" onclick="addNew()">Add</button>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 my-3">
+              <h3>Additional <span id="additionalCount" class="badge badge-primary badge-pill"></span></h3>
+              <div id="additionalHashtags">
+
+              </div>
+            </div>
+          </div>
+        </section>
+        <button type="button" class="btn btn-secondary mb-3 btn-block" onclick="randomize()">Randomize additional hashtags</button>
+        <button type="button" class="btn btn-primary mb-3 btn-block" onclick="generate()">Generate caption</button>
+      <section>
+        <h2 class="my-3">Generated caption</h2>
+          <textarea id="generatedText" class="form-control" rows="15" autofocus></textarea>
+      </section>
+    </div>
+  </main>
+  <footer>
+
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <script src="scripts/hashtags.js"></script>
+  <script src="scripts/script.js"></script>
+</body>
+</html>

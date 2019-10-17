@@ -1,0 +1,10 @@
+#generatedText{
+  white-space: pre-wrap;
+  margin-bottom: 2em;
+}
+#alertContainer{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
